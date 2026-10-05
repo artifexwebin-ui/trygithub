@@ -1,6 +1,9 @@
-public class LeadHelper {
+public static void updateLeadRating(Lead leadRecord) {
 
-    public static void processLead() {
-        System.debug('Processing Lead');
+    if (leadRecord.LeadSource == 'Web') {
+        leadRecord.Rating = 'Cold';
+    } else {
+        leadRecord.Rating = 'Warm';
     }
+
 }
